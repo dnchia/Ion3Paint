@@ -20,8 +20,15 @@ const forceSSL = function() {
 // middleware
 app.use(forceSSL());
 
-app.use(express.static('www'));
+app.use(express.static(__dirname + '/www'));
 app.set('port', process.env.PORT || 8080);
+
+// For all GET requests, send back index.html
+// so that PathLocationStrategy can be used
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/www/index.html'));
+});
+
 app.listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
 });
