@@ -1,6 +1,8 @@
 var express = require('express'),
   app = express();
 
+const path = require('path');
+
 // If an incoming request uses
 // a protocol other than HTTPS,
 // redirect that request to the
@@ -30,5 +32,6 @@ app.get('/*', function(req, res) {
 });
 
 app.listen(app.get('port'), function () {
+
   console.log('Express server listening on port ' + app.get('port'));
 });
