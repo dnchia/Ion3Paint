@@ -28,7 +28,7 @@ app.set('port', process.env.PORT || 8080);
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/www/index.html'));
+  res.sendFile(path.join('/www/index.html'));
 });
 
 app.listen(app.get('port'), function () {
