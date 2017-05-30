@@ -4,4 +4,20 @@ canvas-draw {
   width: 100%;
   display: block;
 
+  #top-toolbar {
+    position: absolute;
+    top: 0;
+  }
+
+  #bottom-toolbar {
+    position: absolute;
+    bottom: 0;
+  }
+
+  ion-label {
+    font-size: 2.5vh;
+    color: #2ec95c;
+    font-weight: bold;
+    font-family: -apple-system, "Roboto", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
 }

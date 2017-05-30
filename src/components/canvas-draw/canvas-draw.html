@@ -1,5 +1,30 @@
+<ion-toolbar id="top-toolbar" color="asphalt">
+  <ion-label>Colores del pincel</ion-label>
+  <ion-buttons>
+    <button
+      *ngFor="let colour of avalaibleColours; let i = index"
+      ion-button
+      (click)="changeColour(colour)">
+      {{availableColoursNames[i]}}
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
 <canvas #myCanvas
         (touchstart)="handleStart($event)"
         (touchmove)="handleMove($event)"
         (touchend)="handleEnd($event)"
-></canvas>
+        (click)="handleClick($event)">
+
+</canvas>
+
+<ion-toolbar id="bottom-toolbar" color="asphalt">
+  <ion-label>Tamaño del pincel</ion-label>
+  <ion-buttons>
+    <button ion-button (click)="changeSize(5)">Pequeño</button>
+    <button ion-button (click)="changeSize(10)">Mediano</button>
+    <button ion-button (click)="changeSize(20)">Grande</button>
+    <button ion-button (click)="changeSize(50)">Muy grande</button>
+    <button ion-button (click)="changeSize(200)">Enorme</button>
+  </ion-buttons>
+</ion-toolbar>
