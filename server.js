@@ -22,8 +22,9 @@ const forceSSL = function() {
 // middleware
 app.use(forceSSL());
 
-app.use(express.static('/www'));
+app.use(express.static(__dirname + '/www'));
 app.set('port', process.env.PORT || 8080);
+
 
 
 app.listen(app.get('port'), function () {
