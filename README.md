@@ -2,6 +2,8 @@
 The application is a paint application developed with Ionic 3, usable in web and mobile environments.
 Is based in the use of the HTML5 canvas to work.
 
+![Dependencies status](https://david-dm.org/dnchia/Ion3Paint.svg)
+
 ## How to use it
 In web environments is necessary to use the device view (inspect in Google Chrome).
 It will be changed and adapted to be a fully hybrid application. 
